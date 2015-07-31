@@ -6,3 +6,4 @@ Viwer using `nbviewer.ipython.org`
 ### The list
 
 * [read from database](http://nbviewer.ipython.org/github/frusciante/PyData-Cookbook/blob/master/read_from_db.ipynb)
+* [收集使用pandas时遇到的坑](http://nbviewer.ipython.org/github/frusciante/PyData-Cookbook/blob/master/kengs_of_pandas.ipynb)
