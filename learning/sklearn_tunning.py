@@ -25,6 +25,8 @@ import time
 """
 对rf，xgb，lgb关键参数调参并输出建议参数
 
+https://www.kaggle.com/eikedehling/tune-and-compare-xgb-lightgbm-rf-with-hyperopt
+
 目前支持F1，AUC。因为fmin是查找满足结果最小的参数，所以在建立scorer的时候需要把目标转换成负数.
 """
 
@@ -155,7 +157,7 @@ class SK_Tunning():
 									learning_rate=0.01,
 									**lgbm_params)
 									
-		models = [GaussianNB(), DecisionTreeClassifier(), rf_model ,GradientBoostingClassifier(), AdaBoostClassifier(),xgb_model,lgbm_model, SVC()]
+		models = [GaussianNB(), DecisionTreeClassifier(), rf_model ,GradientBoostingClassifier(), AdaBoostClassifier(),xgb_model,lgbm_model, SVC(probability=True)]
 		names = ["Naive Bayes", "Decision Tree", "RF", "GDBT", "ADBT", "XGB", "LGBM", "SVM"]
 
 		scorer = MultiScorer({
