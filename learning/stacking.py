@@ -127,9 +127,9 @@ class Stacking():
         for index, model in enumerate(models):
             cur_model = copy.deepcopy(model)
             # 使用全部数据进行预测
-            cur_model.fit(X, y)
+            cur_model.fit(X.values, y.values.ravel())
             # test_result = pd.DataFrame([np.argmax(vec) for vec in cur_model.predict(X_target)])
-            test_result = pd.DataFrame(cur_model.predict_proba(X_target)[:, 1])
+            test_result = pd.DataFrame(cur_model.predict_proba(X_target.values)[:, 1])
             # 构造K-折结果作为特征
             train_result = []
             for i in range(self.k_fold):
