@@ -37,7 +37,7 @@ models = sktune.run()
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 from sklearn.naive_bayes import BernoulliNB
 from sklearn.svm import LinearSVC, SVC
-from sklearn,calibration import CalibratedClassifierCV
+from sklearn.calibration import CalibratedClassifierCV
 
 clf1 = SGDClassifier(
             alpha=5e-05,
